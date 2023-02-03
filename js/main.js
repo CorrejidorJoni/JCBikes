@@ -1,112 +1,214 @@
+///PRODUCTOS
 
-/********Funcion Principal********/
-
- function menuPrincipal() {
-              let total = 0;
-              let menu;
-               do {
-                   menu = parseInt(prompt("¡Bienvenido a JCBikes! \nPor favor, indique la operación que desea realizar:\n1-Comprar Nuevo\n2-Comprar usado\n3- Salir"));
-                  
-                  switch (menu) {
-                     case 1:
-                        total = total + comprarNuevo();
-                         break;
-                      case 2:
-                          total = total + comprarUsado();
-                          break;
-                     case 3: 
-                         alert("¡Muchas gracias por visitar JCBikes, hasta la próxima!")
-                         break;
-                     default:
-                       alert ("La opción ingresa no es válida.");
-                   }
-               } while (menu != 3);
-           }
-
-
-
-/********Funcion Comprar Nuevo********/
-
- function comprarNuevo () {
-    const bicicletas =[
-        { nombre: "Specialized Epic", precio: 1200000},
-        { nombre: "Canondale Scalpel", precio: 1700000},
-        { nombre: "Trek Supercaliber", precio: 2200000},
-        { nombre: "Canyon Supra", precio: 1500000},
-        { nombre: "Raleight Bronx", precio: 600000},
-    ]
-    
-    
-    
-/********Método Array********/
-    
-bicicletas.push({nombre: "Zenith astra", precio: 500000});
-bicicletas.push({nombre: "Mondraker Chorno RR", precio: 800000})
-console.log(bicicletas); 
-     
-
-
-/****Función de orden superior****/
-
-const totalCarrito = bicicletas.reduce((acumulador, bicicleta) => acumulador + bicicleta.precio, 0);
-console.log(totalCarrito);
-
-    
-
-let total = 0;
-let acumulador = 0;
-let modeloNuevo = parseInt(prompt("Por favor, seleccione el modelo que desea adquirir:\n1-Specialized Epic\n2-Canondale Scalpel\n3-Trek Supercaliber\n4-Canyon Supra\n5-Raleight Bronx"))
-    switch (modeloNuevo) {
-        case 1:  if (total == 0){
-            alert ("El modelo Specialized Epic tiene un precio de: " + (total = acumulador + 1200000))
-            }
-            break;
-        case 2: if (total == 0){
-            alert("El modelo Canondale Scalpel tiene un precio de: "  + (total = acumulador +  1700000))
-            }
-            break;
-        case 3: if (total == 0){
-            alert("El modelo Trek Supercaliber tiene un precio de: " + (total = acumulador + 2200000))
-            }
-            break;
-        case 4: if (total == 0){
-            alert("El modelo Canyon Supra tiene un precio de: " + (total = acumulador + 1500000))
-            }
-            break;
-        case 5: if (total == 0){
-            alert("El modelo Raleight Bronx tiene un precio de: " + (total = acumulador + 600000))
-            }
-            break;
-        default: 
-            alert ("opcion invalida")
-          }
-        return acumulador
-    } 
-   
-   
-   
-/********Función comprar usado********/   
-    
-function comprarUsado () {
-let total = 0;
-let acumulador = 0;
-let modeloUsado = parseInt(prompt("Por favor, seleccione el modelo que desea adquirir:\n1-Zenith Astra\n2-Mondraker Chrono RR"))
-        switch (modeloUsado) {
-        case 1: if (total == 0){
-            alert("El modelo Zenith Astra tiene un precio de: " + (total = acumulador + 190000))
-            }
-            break;
-        case 2: if (total == 0){
-            alert("El modelo Mondraker Chrono RR tiene un precio de: " + (total = acumulador + 650000))
-            }
-            break;
-        default:
-            alert ("opcion invalida")
-            }
-            return acumulador
-    }
+const productos = [
+    ///MTB
+    {
         
-menuPrincipal () 
+        modelo: "Epic Pro",
+        imagen: "./img/Epic_Pro_2022_SatinCarbon_01.jpg",
+        categoria: {
+            nombre: "mtb",
+            id: "mtb",
+        },
+        precio: 1850000,
+        id: "mtb-1",
+    },
+    {
+        modelo: "Epic Expert",
+        imagen: "./img/Specialized_Epic_Expert_2021_GlossRedTint_01.jpg",
+        categoria: {
+            nombre: "mtb",
+            id: "mtb",
+        },
+        precio: 2100000,
+        id: "mtb-2",
+    },
+    {
+        modelo: "Epic Expert",
+        imagen: "./img/Specialized_Epic_Expert_2021_SatinCarbon_01.jpg",
+        categoria: {
+            nombre: "mtb",
+            id: "mtb",
+        },
+        precio: 2100000,
+        id: "mtb-3",
+    },
+    {
+        modelo: "Epic Expert New",
+        imagen: "./img/Specialized_EpicExpert2022_GlossPine_01.jpg",
+        categoria: {
+            nombre: "mtb",
+            id: "mtb",
+        },
+        precio: 2400000,
+        id: "mtb-4",
+    },
+
+    ///ROAD
+    {
+        modelo: "Roubaix Sport",
+        imagen: "./img/Specialized_Roubaix_Sport_SatinFlakeSilver_01.jpg",
+        categoria: {
+            nombre: "road",
+            id: "road",
+        },
+        precio: 1400000,
+        id: "ruta-1",
+    },
+    {
+        modelo: "Tarmac SL6 Sport",
+        imagen: "./img/Specialized_Tarmac_SL6_Sport_Oasis_01.jpg",
+        categoria: {
+            nombre: "road",
+            id: "road",
+        },
+        precio: 980000,
+        id: "ruta-2",
+    },
+    {
+        modelo: "Tarmac Sworks SL7",
+        imagen: "./img/Sworks_Tarmarc_SL7_Shimano_RedTint_01.jpg",
+        categoria: {
+            nombre: "road",
+            id: "road",
+        },
+        precio: 3760000,
+        id: "ruta-3",
+    },
+    {
+        modelo: "Tarmac SL7 Expert",
+        imagen: "./img/Tarmac_SL7_Expert_Marron_01.jpg",
+        categoria: {
+            nombre: "road",
+            id: "road",
+        },
+        precio: 1200000,
+        id: "ruta-4",
+    },
+
+    ///GRAVEL
+    {
+        modelo: "Diverge Expert Carbon",
+        imagen: "./img/Diverge_Expert_Carbon_GlossRaspberry01.jpg",
+        categoria: {
+            nombre: "gravel",
+            id: "gravel",
+        },
+        precio: 1180000,
+        id: "gravel-1",
+    },
+    {
+        modelo: "Diverge Comp Carbon",
+        imagen: "./img/DivergeCompCarbon2022_Gunmetal_01.jpg" ,
+        categoria: {
+            nombre: "gravel",
+            id: "gravel",
+        },
+        precio: 995000,
+        id: "gravel-2",
+    },
+    {
+        modelo: "Diverge Sport Carbon",
+        imagen: "./img/DivergeSportCarbon_GlossWhiteSage_01.jpg",
+        categoria: {
+            nombre: "gravel",
+            id: "gravel",
+        },
+        precio: 870000,
+        id: "gravel-3",
+    },
+    {
+        modelo: "Diverge Sworks",
+        imagen: "./img/S-Works_Diverge_GlossLightSilver_01.jpg",
+        categoria: {
+            nombre: "gravel",
+            id: "gravel",
+        },
+        precio: 3400000,
+        id: "gravel-4",
+    },
+
+    ///E-Bike
+    {
+        modelo: "Turbo Levo SL Expert",
+        imagen: "./img/Specialied_Turbo_Levo_SL_Expert_CarbonWhite_01.jpg",
+        categoria: {
+            nombre: "ebike",
+            id: "ebike",
+        },
+        precio: 2700000,
+        id: "ebike-1",
+    },
+    {
+        modelo: "Turbo Levo Comp",
+        imagen: "./img/Specialized_Turbo_Levo_Comp_Carbon_2022_Black_01.jpg",
+        categoria: {
+            nombre: "ebike",
+            id: "ebike",
+        },
+        precio: 2200000,
+        id: "ebike-2",
+    },
+    {
+        modelo: "Turbo Levo Alloy", 
+        imagen: "./img/Turbo_Levo_Comp_Alloy_2022_SageGreen_01.jpg",
+        categoria: {
+            nombre: "ebike",
+            id: "ebike",
+        },
+        precio: 1800000,
+        id: "ebike-3",
+    }
+
+];
+
+const contenedorProductos = document.querySelector("#contenedor-productos");
+let botonAgregar = document.querySelectorAll(".producto-agregar");
+
+function cargaProductos () {
+    productos.forEach(producto => {
+
+        const div = document.createElement("div");
+        div.classList.add("producto");
+        div.innerHTML = `
+        
+        <img class= "producto-imagen" src="${producto.imagen}"  alt="${producto.modelo}">
+        <div class="producto-detalles">
+        <h5 class="producto-modelo">${producto.modelo}</h5>
+        <p class="producto-precio">${producto.precio}</p>
+        <button class="producto-agregar" id="${producto.id}">Agregar</button>
+        </div>
+        `;
+
+        contenedorProductos.append(div);
+    })
+    
+}
+
+cargaProductos();
+
+
+// function funcionBotones () {
+//     botonAgregar = document.querySelectorAll(".producto-agregar");
+
+//     botonAgregar.forEach(boton => {
+//         boton.addEventListener("click", agregarAlCarrito);
+//     });
+// }
+
+// const productosCarrito = [];
+
+// function agregarAlCarrito(e) {
+
+//     const id = e.currentTarget.id;
+//     console.log(id);
+
+    
+   
+// }
+
+
+
 
 
 
