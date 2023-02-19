@@ -17,10 +17,10 @@ p {
   color: #333333;
 }
 
-.header {
+.headerp {
   position:relative;
   text-align:center;
-  background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgba(0,172,193,1) 100%);
+  background: linear-gradient(60deg, #543ab7 0%, #00acc1 100%);
   color:white;
 }
 .logo {
@@ -32,7 +32,9 @@ p {
 }
 
 .inner-header {
-  height:65vh;
+  background-image: url(https://images.bike24.net/media/1440/i/mb/91/b9/71/header-2880x920-mtb-make-trails-better-22-05-bike24-1232954.jpg);
+  background-size: cover;
+  height:50vh;
   width:100%;
   margin: 0;
   padding: 0;
@@ -47,6 +49,7 @@ p {
 
 .waves {
   position:relative;
+  background-color: black;
   width: 100%;
   height:15vh;
   margin-bottom:-7px; /*Fix for safari gap*/
@@ -59,6 +62,14 @@ p {
   height:20vh;
   text-align:center;
   background-color: white;
+}
+
+svg{
+  margin-right: 20px;
+}
+
+.wavef{
+  margin-top: 20px;
 }
 
 /* Animation */
