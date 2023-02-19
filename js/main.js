@@ -1,6 +1,5 @@
 ///PRODUCTOS
-
-const productos = [
+ const productos = [
     ///MTB
     {
         
@@ -167,9 +166,9 @@ const botonesCategorias = document.querySelectorAll(".boton-categoria");
 let botonesAgregar = document.querySelectorAll(".producto-agregar");
 const numero = document.querySelector("#numero");
 
-function cargaProductos (productosElegidos) {
+function cargarProductos (productosElegidos) {
 
-contenedorProductos.innerHTML= "";
+    contenedorProductos.innerHTML = "";
 
     productosElegidos.forEach(producto => {
 
@@ -192,7 +191,7 @@ contenedorProductos.innerHTML= "";
     
 }
 
-cargaProductos(productos);
+cargarProductos(productos);
 
 botonesCategorias.forEach(boton => {
     boton.addEventListener("click", (e) =>{
@@ -205,10 +204,10 @@ botonesCategorias.forEach(boton => {
 
             const productosBoton = productos.filter(producto => producto.categoria.id === e.currentTarget.id);
 
-            cargaProductos(productosBoton);
+            cargarProductos(productosBoton);
 
         } else {
-            cargaProductos(productos);
+            cargarProductos(productos);
         }
        
     })
